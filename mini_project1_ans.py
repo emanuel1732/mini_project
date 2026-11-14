@@ -9,12 +9,10 @@ def is_valid_coupon(code):
 
 def  add_to_cart(item, price, cart=None):
     """Add  an (item, price) tuple to the cart and return the cart."""
-
     if cart is None:
         cart = []
     cart.append((item,price))
     return cart
-
 
 def checkout(cart,coupon=None):
     """Return (final_total,status_message) for the given cart"""
@@ -40,21 +38,12 @@ def print_receipt(total,message):
     print("=" * 55)  
     print(cart1)         
     print(f"status: {message}")
-
     print(f"Total: Kshs.{total:.1f}")
-   
     print(f"Total: Kshs.{total:.2f}")
     print("=" * 55)
 
 if __name__ == "__main__":
     cart1= add_to_cart('Electric kettle', 950.00)
-    
-    
-   
-
-    
     print_receipt(*checkout(cart1, "SAVE10"))
-   
-    
     print("Thank you for shopping with us!")
     
