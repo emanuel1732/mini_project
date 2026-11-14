@@ -54,3 +54,4 @@ if __name__ == "__main__":
     assert len(add_to_cart("C",3))== 1
     assert is_valid_coupon("VIP20") is True
     assert is_valid_coupon("other")is False
+    print("Thank you for shopping with us!")
